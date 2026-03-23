@@ -7,6 +7,8 @@ import (
 
 var confLogger = GetLogger("network")
 
+// GetLocalIpV4 retrieves the local IPv4 address for the specified network interface card.
+// It returns the IPv4 address as a string or panics if the interface is not found or has no IPv4 address.
 func GetLocalIpV4(card string) string {
 	inters, err := net.Interfaces()
 	if err != nil {

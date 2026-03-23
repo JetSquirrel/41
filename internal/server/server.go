@@ -1,3 +1,4 @@
+// Package server provides the CLI server configuration and initialization.
 package server
 
 import (
@@ -6,6 +7,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+// NewServer creates and configures a new CLI application instance with all required flags and handlers.
+// It returns a configured cli.App ready to be run with command-line arguments.
 func NewServer() *cli.App {
 	server := cli.NewApp()
 	server.Version = "v1.0.0"

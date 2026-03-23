@@ -1,3 +1,4 @@
+// Package protocol provides handlers for various network protocol parsing.
 package protocol
 
 import (
@@ -10,6 +11,9 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
+// ProtocolHandler is the main entry point for packet capture and protocol processing.
+// It sets up the packet capture interface, applies BPF filters, and routes packets
+// to the appropriate protocol handler based on the configured protocol type.
 func ProtocolHandler(ctx *cli.Context) (err error) {
 	var confLogger = utils.GetLogger("ProtocolHandler")
 	einterface, snapshotLength, port := ctx.String("interface"), ctx.Int("snapshot-length"), ctx.Int("port")
