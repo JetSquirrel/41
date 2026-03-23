@@ -1,6 +1,6 @@
 module 41
 
-go 1.18
+go 1.22
 
 require (
 	git.woa.com/jce/jce v1.2.0

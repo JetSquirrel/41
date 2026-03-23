@@ -1,0 +1,50 @@
+# 41 Configuration File Example
+# Copy this file to config.yaml and modify as needed
+
+# Network interface to capture packets on
+# Required: yes
+interface: lo
+
+# Target port to monitor
+# Default: 80
+port: 8001
+
+# Protocol to parse (http1, requestf, grpc)
+# Default: http1
+protocol: http1
+
+# Maximum length of packet capture in bytes
+# Default: 10240
+snapshot_length: 10240
+
+# BPF filter expression (optional)
+# Example: "tcp and not port 22"
+# filter: ""
+
+# Kafka Configuration
+kafka:
+  # Kafka broker address
+  # Default: 127.0.0.1:9092
+  host: 127.0.0.1:9092
+
+  # Kafka topic name
+  # Default: test-41
+  topic: test-41
+
+  # Number of Kafka worker threads
+  # Default: 10
+  worker: 10
+
+  # Send interval in seconds
+  # Default: 5
+  send_interval: 5
+
+  # Send queue size
+  # Default: 500000
+  send_queue: 500000
+
+# Logging Configuration (future enhancement)
+# logging:
+#   level: info
+#   format: json
+#   output: stdout
