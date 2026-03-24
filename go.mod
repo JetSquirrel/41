@@ -3,7 +3,6 @@ module 41
 go 1.22
 
 require (
-	git.woa.com/jce/jce v1.2.0
 	github.com/MoSunDay/concurrent-map v0.0.0-20191203013645-5995e9c56ca5
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/gopacket v1.1.19
@@ -14,6 +13,7 @@ require (
 
 require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
+	github.com/erpc-go/jce-codec v0.0.1 // indirect
 	github.com/klauspost/compress v1.15.7 // indirect
 	github.com/pierrec/lz4/v4 v4.1.15 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
