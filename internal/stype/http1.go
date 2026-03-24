@@ -481,7 +481,6 @@ func (r *HTTPRequestResponseRecord) EncodeToString() string {
 	result := buffer.String()
 
 	confLogger.Println(result)
-	confLogger.Println("\n")
 	return result
 }
 

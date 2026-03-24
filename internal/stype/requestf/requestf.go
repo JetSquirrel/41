@@ -3,7 +3,7 @@ package requestf
 import (
 	"fmt"
 
-	"41/internal/stype/jce"
+	jce "github.com/erpc-go/jce-codec"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

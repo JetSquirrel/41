@@ -24,7 +24,7 @@ func SliceToString(buf []byte) string {
 func AtoI(s []byte, base int) (num int, ok bool) {
 	var v int
 	ok = true
-	for i := 0; i < len(s); i++ {
+	for i := range len(s) {
 		if s[i] > 127 {
 			ok = false
 			break
