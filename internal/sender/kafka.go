@@ -26,7 +26,7 @@ func (sender *KafkaSender) Send(item []byte) (err error) {
 }
 
 func (sender *KafkaSender) initConsumer() {
-	for i := 0; i < int(sender.Worker); i++ {
+	for i := range int(sender.Worker) {
 		go func(index int) {
 			bufferLen := 100
 			conn := &kafka.Writer{

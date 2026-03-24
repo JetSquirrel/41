@@ -24,12 +24,13 @@ func main() {
 	}()
 
 	go func() {
-		http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
+		mux := http.NewServeMux()
+		mux.HandleFunc("GET /hello", func(w http.ResponseWriter, r *http.Request) {
 			time.Sleep(10 * time.Millisecond)
 			w.Header().Set("Content-Type", "application/json")
 			w.Write([]byte(`{"status":"OK", "a": "a", "b": {"c": "d"}}`))
 		})
-		http.ListenAndServe("127.0.0.1:8001", nil)
+		http.ListenAndServe("127.0.0.1:8001", mux)
 	}()
 
 	if err := server.RunContext(ctx, os.Args); err != nil {

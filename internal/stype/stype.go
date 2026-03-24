@@ -37,7 +37,6 @@ func (r *RequestResponseRecord) EncodeToString() string {
 	result := buffer.String()
 
 	confLogger.Println(result)
-	confLogger.Println("\n")
 	return result
 }
 

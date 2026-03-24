@@ -2,12 +2,12 @@ package protocol
 
 import (
 	"41/internal/sender"
-	"41/internal/stype/jce"
 	"41/internal/stype/requestf"
 	"41/internal/utils"
 	"encoding/json"
 	"log"
 
+	jce "github.com/erpc-go/jce-codec"
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/layers"
 	"github.com/urfave/cli/v2"
